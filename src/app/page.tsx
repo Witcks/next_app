@@ -1,4 +1,3 @@
-import { ModeToggle } from "@/components/mode-toggle";
 import Image from "next/image";
 
 export default function Home() {
@@ -50,7 +49,6 @@ export default function Home() {
           >
             Read our docs
           </a>
-          <ModeToggle />
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
