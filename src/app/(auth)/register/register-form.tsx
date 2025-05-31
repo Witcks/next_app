@@ -16,6 +16,7 @@ import {
   RegisterBodyType,
 } from "@/schemaValidations/auth.schema";
 import envConfig from "@/config";
+import { toast } from "sonner";
 
 export default function RegisterForm() {
   const form = useForm<RegisterBodyType>({
@@ -44,7 +45,7 @@ export default function RegisterForm() {
       }
       return res.json();
     });
-    console.log("Registration successful:", result);
+    toast.success(result?.message || "Registration successful");
   }
 
   return (

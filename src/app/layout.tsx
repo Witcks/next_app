@@ -3,6 +3,7 @@ import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistMono.variable} antialiased`}>
+        <Toaster />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
